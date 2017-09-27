@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { AdminComponent } from './admin/admin.component';
+import { EditPostComponent } from './edit-post/edit-post.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -28,7 +29,8 @@ export const firebaseConfig = {
     AboutComponent,
     PostListComponent,
     PostDetailComponent,
-    AdminComponent
+    AdminComponent,
+    EditPostComponent
   ],
   imports: [
     BrowserModule,

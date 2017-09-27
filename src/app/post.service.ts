@@ -19,7 +19,17 @@ export class PostService {
    }
 
    getPostById(postId: string){
-     return this.database.object('posts/' + postId);
+     return this.database.object('/posts/' + postId);
   }
-
+  editedPost(localEditedPost){
+    var postEntryInFirebase = this.getPostById(localEditedPost.$key);
+    postEntryInFirebase.update({title: localEditedPost.title,
+                                author: localEditedPost.author,
+                                description: localEditedPost.description,
+                                cost: localEditedPost.cost});
+  }
+  deletePost(localPostToDelete){
+      var postEntryInFirebase = this.getPostById(localPostToDelete.$key);
+      postEntryInFirebase.remove();
+    }
 }

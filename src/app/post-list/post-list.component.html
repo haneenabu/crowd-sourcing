@@ -1,7 +1,13 @@
 <h2>Post List</h2>
 
-<div *ngFor="let post of posts | async" (click)="goToDetailPage(post)" class="panel panel-default">
+<div *ngFor="let post of posts | async" class="panel panel-default">
   <div class="panel-body">
-    <h3><strong>{{post.title}}</strong> by {{post.author}}</h3>
+    <h3 (click)="goToDetailPage(post)"><em>{{post.title}}</em> by {{post.author}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      {{post.description}}
+      <hr>
+
+      <app-edit-post [selectedPost]= "post"></app-edit-post>
+    </div>
   </div>
 </div>

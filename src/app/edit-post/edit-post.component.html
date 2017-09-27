@@ -1,0 +1,20 @@
+<h4>Edit Post</h4>
+
+<label>Edit Post Title:</label>
+<input [(ngModel)]="selectedPost.title">
+<br>
+
+<label>Edit Post Author:</label>
+<input [(ngModel)]="selectedPost.author">
+<br>
+
+<label>Edit Post Description:</label>
+<input [(ngModel)]="selectedPost.description">
+<br>
+
+<label>Edit Post Cost:</label>
+<input [(ngModel)]="selectedPost.cost" type="number">
+
+<button class="btn btn-success" (click)="beginEditingPost(selectedPost)">Edit</button>
+<hr>
+<button class="btn btn-danger" (click)="beginDeletingPost(selectedPost)">Delete</button>
