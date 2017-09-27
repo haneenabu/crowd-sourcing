@@ -1,27 +1,32 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Add New Album to Inventory</h3>
+    <h3 class="panel-title">Add New Post to List</h3>
   </div>
   <div class="panel-body">
     <div>
       <div>
-        <label>Album Title:</label>
+        <label>Post Title:</label>
         <br>
         <input #newTitle>
       </div>
 
       <div>
-        <label>Album Artist:</label>
+        <label>Post Author:</label>
         <br>
-        <input #newArtist>
+        <input #newAuthor>
       </div>
 
       <div>
-        <label>Album Description:</label>
+        <label>Post Description:</label>
         <br>
         <textarea #newDescription></textarea>
       </div>
-       <button (click)="submitForm(newTitle.value, newArtist.value, newDescription.value); newTitle.value=''; newArtist.value=''; newDescription.value=''">Add</button>
+      <div>
+        <label>Post Cost:</label>
+        <br>
+        <input #newCost type="number">
+      </div>
+       <button (click)="submitForm(newTitle.value, newAuthor.value, newDescription.value, newCost.value); newTitle.value=''; newAuthor.value=''; newDescription.value=''; newCost.value=''">Create Post</button>
     </div>
   </div>
 </div>

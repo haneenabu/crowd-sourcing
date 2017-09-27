@@ -1,22 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { Album } from '../album.model';
-import { AlbumService } from '../album.service';
+import { Post } from '../post.model';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css'],
-  providers: [AlbumService]
+  providers: [PostService]
 })
 export class AdminComponent implements OnInit {
 
-   constructor(private albumService: AlbumService) { }
+   constructor(private postService: PostService) { }
 
   ngOnInit() {
   }
 
-  submitForm(title: string, artist: string, description: string) {
-      var newAlbum: Album = new Album(title, artist, description);
-      this.albumService.addAlbum(newAlbum);
+  submitForm(title: string, author: string, description: string, cost: number) {
+      var newPost: Post = new Post(title, author, description, cost);
+      this.postService.addPost(newPost);
     }
 }

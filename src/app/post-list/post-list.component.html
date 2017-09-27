@@ -1,0 +1,7 @@
+<h2>Post List</h2>
+
+<div *ngFor="let post of posts | async" (click)="goToDetailPage(post)" class="panel panel-default">
+  <div class="panel-body">
+    <h3><strong>{{post.title}}</strong> by {{post.author}}</h3>
+  </div>
+</div>

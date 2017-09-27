@@ -10,8 +10,8 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { routing } from './app.routing';
 import { AboutComponent } from './about/about.component';
-import { MarketplaceComponent } from './marketplace/marketplace.component';
-import { AlbumDetailComponent } from './album-detail/album-detail.component';
+import { PostListComponent } from './post-list/post-list.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 import { AdminComponent } from './admin/admin.component';
 
 export const firebaseConfig = {
@@ -26,8 +26,8 @@ export const firebaseConfig = {
     AppComponent,
     WelcomeComponent,
     AboutComponent,
-    MarketplaceComponent,
-    AlbumDetailComponent,
+    PostListComponent,
+    PostDetailComponent,
     AdminComponent
   ],
   imports: [
