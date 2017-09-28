@@ -7,8 +7,7 @@ body{
   background-image: url("background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: cursive;
-  color: red;
+  font-family: cursive !important;
   /*font-style: italic;*/
 }
 h1{
