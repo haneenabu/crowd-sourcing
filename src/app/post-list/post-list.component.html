@@ -1,12 +1,20 @@
 <h2>Post List</h2>
-
-<div *ngFor="let post of posts | async" class="panel panel-default">
+<div>
+  <label>View by Category</label><br>
+  <select (change)="onFilterCategoryChange($event.target.value)">
+    <option value="allPosts" selected="selected">All Posts</option>
+    <option value="Charity">Charity</option>
+    <option value="Education" >Education</option>
+    <option value="Ideas" >Ideas</option>
+  </select>
+</div>
+<hr>
+<div *ngFor="let post of posts | async | category:filterByCategory " class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(post)"><em>{{post.title}}</em> by {{post.author}}</h3>
     <div *ngIf="currentRoute === '/admin'">
       {{post.description}}
       <hr>
-
       <app-edit-post [selectedPost]= "post"></app-edit-post>
     </div>
   </div>

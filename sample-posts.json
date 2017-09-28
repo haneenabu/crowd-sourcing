@@ -1,16 +1,19 @@
 { "posts": [{
     "title": "Hurricane Harvey",
     "author": "Kimberly Lu",
+    "category": "Charity",
     "description": "A devastated hurricane ripped through Texas on August 17, 2017.  Numerous homes and businesses were destroyed.  Food and other essential supplies are dwindling fast.  We need your help!",
     "cost": 200000},
     {
     "title": "College B.S. in Computer Science",
     "author": "K. Lu",
+    "category": "Education",
     "description": "I am pseudo-smart.  I always want to learn new and exciting things.  But I realized that those things are out-of-reach for me.  So I decided that computer science was boring, but safe.  Please help me Obi-wan; you're my only hope.",
     "cost": 80000},
     {
     "title": "A New House in Lake Oswego",
     "author": "Kimmy Lu",
+    "category": "Ideas",
     "description": "Okay, so my current house sucks.  It's too small and too old.  My neighbors are noisy and annoying. I cannot concentrate, eat, or enjoy life.  I've lost so much weight.  I went from 150lbs to just under 100lb.  Help me before I become nothing!",
     "cost": 700000
     }]

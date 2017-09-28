@@ -14,6 +14,7 @@ import { PostListComponent } from './post-list/post-list.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { AdminComponent } from './admin/admin.component';
 import { EditPostComponent } from './edit-post/edit-post.component';
+import { CategoryPipe } from './category.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -30,7 +31,8 @@ export const firebaseConfig = {
     PostListComponent,
     PostDetailComponent,
     AdminComponent,
-    EditPostComponent
+    EditPostComponent,
+    CategoryPipe
   ],
   imports: [
     BrowserModule,

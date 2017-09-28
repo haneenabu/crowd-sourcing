@@ -22,10 +22,16 @@ export class PostDetailComponent implements OnInit {
     private postService: PostService) { }
 
   ngOnInit() {
-    this.route.params.forEach((urlParameters) => {
-      this.postId = urlParameters['id'];
+    this.route.params.forEach((urlParametersArray) => {
+      this.postId = urlParametersArray['id'];
     });
-    this.postToDisplay = this.postService.getPostById(this.postId);
+    //subscribe not needed is async is used 
+    // this.postService.getPostById(this.postId).subscribe(dataLastEmittedFromObserver => {
+    //   this.postToDisplay = new Post(dataLastEmittedFromObserver.title,
+    //     dataLastEmittedFromObserver.author, dataLastEmittedFromObserver.category, dataLastEmittedFromObserver.description, dataLastEmittedFromObserver.cost);
+    //     console.log(this.postToDisplay)
+    // })
+
   }
 
 }

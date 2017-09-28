@@ -15,7 +15,11 @@
         <br>
         <input #newAuthor>
       </div>
-
+      <div>
+        <label>Post Category:</label>
+        <br>
+        <input #newCategory>
+      </div>
       <div>
         <label>Post Description:</label>
         <br>
@@ -26,7 +30,7 @@
         <br>
         <input #newCost type="number">
       </div>
-       <button (click)="submitForm(newTitle.value, newAuthor.value, newDescription.value, newCost.value); newTitle.value=''; newAuthor.value=''; newDescription.value=''; newCost.value=''">Create Post</button>
+       <button (click)="submitForm(newTitle.value, newAuthor.value, newCategory.value, newDescription.value, newCost.value); newTitle.value=''; newAuthor.value=''; newCategory.value=''; newDescription.value=''; newCost.value=''">Create Post</button>
     </div>
   </div>
 </div>

@@ -15,7 +15,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class PostListComponent implements OnInit {
   posts: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
-
+  filterByCategory: string;
 
   constructor (private router: Router, private postService: PostService){}
 
@@ -26,5 +26,8 @@ ngOnInit(){
 
 goToDetailPage(clickedPost) {
   this.router.navigate(['posts', clickedPost.$key]);
+}
+onFilterCategoryChange(optionFromMenu) {
+  this.filterByCategory = optionFromMenu;
 }
 }
